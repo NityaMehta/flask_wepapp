@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='main.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='home.css') }}" />
+</head>
+
+
+<body>
+    <div class="topnav">
+        <a class="active" href="{{ url_for('login') }}">Login</a>
+        <a href="{{ url_for('register') }}">Register</a>
+
+    </div>
+    <main>
+
+
+        <p>
+
+            <form id="login_form" class="form_class" action="{{url_for('login')}}" method="POST">
+                <div class="form_div">
+                    <label> Login</label>
+                    <input class="field_class" type="text" placeholder="Enter Username" name="username" required>
+
+        </p>
+
+        <p>
+
+            <input class="field_class" type="password" placeholder="Enter Password" name="password" required>
+            </div>
+        </p>
+        <div class="info_div">{{ msg }}</div>
+        <p>
+            <button class="submit_class" type="submit">Login </button>
+        </p>
+
+        </form>
+    </main>
+</body>
+
+</html>

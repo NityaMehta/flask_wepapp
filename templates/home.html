@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='home.css') }}" />
+</head>
+
+
+
+<body>
+
+    <section class="contact">
+        <div class="layout">
+            <div class="text-center">
+                <h1 class="section-title">Contact Us </h1>
+
+            </div>
+            <div class="grid-8 form">
+                <form action="{{ url_for('login') }}" id="contact_form" name="contactForm">
+                    <div class="form-inline clearfix">
+                        <div class="form-group grid-6 ">
+                            <input type="text" placeholder="Name" name="name" class="form-control" required>
+                        </div>
+                        <div class="form-group grid-6">
+                            <input type="email" placeholder="Email " name="email" class="form-control" required>
+                        </div>
+                        <div class="form-group grid-6">
+                            <input type="text" placeholder="Subject" name="subject" class="form-control" required>
+                        </div>
+
+                        <div class="form-group grid-12">
+                            <textarea placeholder="Message" rows="3" name="message" class="form-control"></textarea>
+                        </div>
+                    </div>
+
+                    <div id="submit" class="form-group grid-12">
+                        <input type="submit" value="send" class="costom-btn" id="send_message">
+                    </div>
+                </form>
+
+
+
+
+    </section>
+
+</body>
+
+</html>
